@@ -1,0 +1,15 @@
+{% extends 'main\base.html' %}
+
+{% block title %}
+Пополнить список
+{% endblock %}
+
+{% block content %}
+    <h1>Добавление книги в список чтения</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{forms.book_name}}<br>
+        {{forms.description}}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock %}

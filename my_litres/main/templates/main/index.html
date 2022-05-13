@@ -1,0 +1,16 @@
+{% extends 'main\base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+    <h1>Мои книги</h1>
+    {% for el in books %}
+        <div  class="alert alert-warning mt-2">
+            <h3> {{el.book_name}}</h3>
+            <p>{{el.description}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
